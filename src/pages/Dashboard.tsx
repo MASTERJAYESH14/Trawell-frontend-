@@ -190,7 +190,7 @@ export default function Dashboard() {
 
         console.log("Sending ride data:", rideData); // Log the request data
 
-        const response = await axios.post("http://localhost:5000/api/locations", rideData);
+        const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/locations`, rideData);
 
         console.log("Ride confirmed:", response.data); // Log the response
 
